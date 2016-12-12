@@ -13,7 +13,7 @@ local function run(msg, matches)
        local hash = 'muteall:'..msg.to.id
        if not matches[2] then
               redis:set(hash, true)
-             return "<b>Mute Status switched to</b> : <code>Enable</code>"
+             return "<b>Mute Status Switched to</b> : <code>Enable</code>"
  else
 
 local hour = string.gsub(matches[2], 'h', '')
@@ -30,7 +30,7 @@ redis:setex(hash, num4, true)
 if matches[1] == 'unmuteall' and is_momod(msg) then
                local hash = 'muteall:'..msg.to.id
         redis:del(hash)
-          return "<b>Mute Status switched to</b> : <code>Disable</code>"
+          return "<b>Mute Status Switched to</b> : <code>Disable</code>"
   end
 end
 return {
