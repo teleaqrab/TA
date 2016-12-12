@@ -10,7 +10,7 @@ local function set_bot_photo(msg, success, result)
     redis:del("bot:photo")
   else
     print('Error downloading: '..msg.id)
-    send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
+    send_large_msg(receiver, 'Update Your Bot TG From @MobinDev', ok_cb, false)
   end
 end
 
@@ -172,18 +172,18 @@ local function run(msg,matches)
     if matches[1] == "markread" then
     	if matches[2] == "on" then
     		redis:set("bot:markread", "on")
-    		return "Mark read > on"
+    		return "<b>Markread Switched to :</b> <code>On</code>"
     	end
     	if matches[2] == "off" then
     		redis:del("bot:markread")
-    		return "Mark read > off"
+    		return "<b>Markread Switched to :</b> <code>Off</code>"
     	end
     	return
     end
     if matches[1] == "pm" then
     	local text = "Message From "..(msg.from.username or msg.from.last_name).."\n\nMessage : "..matches[3]
     	send_large_msg("user#id"..matches[2],text)
-    	return "Message has been sent"
+    	return "Message has been sent!"
     end
     
     if matches[1] == "pmblock" then
@@ -320,6 +320,7 @@ return {
 	"^[#!/](sendcontact) (.*) (.*) (.*)$",
 	"^[#!/](mycontact)$",
 	"^[#/!](reload)$",
+	"^(reload)$",
 	"^[#/!](updateid)$",
 	"^[#/!](sync_gbans)$",
 	"^[#/!](addlog)$",
@@ -331,4 +332,4 @@ return {
 }
 --By @MobinDev :)
 --https://github.com/SEEDTEAM/TeleSeed/blob/test/plugins/admin.lua
----Modified by @Rondoozle for supergroups
+---Modified by @Rondoozle and @MobinDev
