@@ -194,7 +194,7 @@ local support_id = msg.from.id
 		local receiver = get_receiver(msg)
         savelog(msg.to.id, name.." ["..msg.from.id.."] baned user ".. matches[2])
         ban_user(matches[2], msg.to.id)
-		send_large_msg(receiver, '<b>Done!</b>\nUser ['..matches[2]..'] Banned :p')
+		send_large_msg(receiver, '<b>Done!</b>\nUser <code>['..matches[2]..']</code> Banned :D')
       else
 		local cbres_extra = {
 		chat_id = msg.to.id,
@@ -222,7 +222,7 @@ local support_id = msg.from.id
         	local print_name = user_print_name(msg.from):gsub("‮", "")
 			local name = print_name:gsub("_", "")
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return '<b>Done!</b>\nUser <b>'..user_id..'</b> Unbanned :D'
+        	return '<b>Done!</b>\nUser <b>['..user_id..']</b> Unbanned :D'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -287,7 +287,7 @@ end
          	return false
         end
         	banall_user(targetuser)
-       		return '<b>Done!</b>\nUser ['..user_id..' ] <code>Globally</code> banned'
+       		return '<b>Done!</b>\nUser <code>['..user_id..']</code> <code>Globally</code> Banned'
      else
 	local cbres_extra = {
 		chat_id = msg.to.id,
@@ -299,7 +299,7 @@ end
 		resolve_username(username, kick_ban_res, cbres_extra)
       end
   end
-  if matches[1]:lower() == 'unbanall' or matches[1] =='خ گلوبال بن' then -- Global unban
+  if matches[1]:lower() == 'unbanall' or matches[1] =='ungb' then -- Global unban
     local user_id = matches[2]
     local chat_id = msg.to.id
       if string.match(matches[2], '^%d+$') then
@@ -307,7 +307,7 @@ end
           	return false
         end
        		unbanall_user(user_id)
-        	return '<b>Done!</b>\nUser ['..user_id..' ] <code>Globally</code> unbanned'
+        	return '<b>Done!</b>\nUser ['..user_id..'] <b>Globally</b> unbanned'
     else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -343,8 +343,8 @@ return {
     "^(بن)$",
     "^(بن) (.*)$",
     "^(خ بن) (.*)$",
-    "^(خ گلوبال بن) (.*)$",
-    "^(خ گلوبال بن)$",
+    "^(ungb) (.*)$",
+    "^(ungb)$",
     "^(اخراج) (.*)$",
     "^(خ بن)$",
     "^[#!/]([Bb]an) (.*)$",
