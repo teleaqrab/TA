@@ -86,16 +86,16 @@ local service = msg.service
 local name_log = user_print_name(msg.from)
 if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel" then
 	if is_gbanned(msg.from.id) then
-        return 'You are globally banned.'
+        return 'You are Globally banned.'
 	end
     if matches[1] == 'join' then
 	local data = load_data(_config.moderation.data)
 	if matches[2]:lower() == 'english' and matches[3]:lower() == 'support' then
 		savelog(msg.to.id, name_log.." ["..msg.from.id.."] tried to join English support")
-		local target = 1041751030
+		local target = 243587919
 		local long_id = data[tostring(target)]['long_id']
 		if is_banned(msg.from.id, tostring(target)) then
-			return 'You are banned.'
+			return 'You are Banned.'
 		end
 		if data[tostring(target)]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, tostring(target)) then
 			return 'Group is private.'
