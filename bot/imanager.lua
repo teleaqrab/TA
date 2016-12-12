@@ -248,19 +248,21 @@ function create_config( )
     },
     sudo_users = {160149610,0000000}, -- Sudo User
     moderation = {data = 'data/moderation.json'}, -- Bot BackUp file
-    about_text = [[iManager - En
+    about_text = [[iManager - Cli
 		
-A new <b>AntiSpam-Bot</b> Based on TeleSeed 
+A new <b>AntiSpam-Bot</b> Based on <code>TeleSeed</code>
+github.com/MobinDehghani/iManager
 		
-@MobinDev [Developer]
-@MrKrn [Seller]
-@AboutBots [Channel]
-@leedBot [API-Bot]
+@MobinDev <i>[Developer]</i>
+@MrKrn <i>[Seller]</i>
+@AboutBots <i>[Channel]</i>
+@leedBot <i>[API-Bot]</i>
 
 Special thanks to :
 @Namusn - Parsaw
 @Sudo1 - Amir Hossein
 @inviter - Mobin
+@Alirezamee - AliReza
 
 Bot Support :
 https://telegram.me/joinchat/CYuwakBXO9sosgQ_8xuYTw
