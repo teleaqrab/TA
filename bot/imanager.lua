@@ -140,7 +140,7 @@ local function is_plugin_disabled_on_chat(plugin_name, receiver)
     -- Checks if plugin is disabled on this chat
     for disabled_plugin,disabled in pairs(disabled_chats[receiver]) do
       if disabled_plugin == plugin_name and disabled then
-        local warning = 'Plugin '..disabled_plugin..' is disabled on this chat'
+        local warning = ''
         print(warning)
         send_msg(receiver, warning, ok_cb, false)
         return true
@@ -246,7 +246,7 @@ function create_config( )
     "lock_Edit",
     "lock_Cmds"
     },
-    sudo_users = {160149610,0000000}, -- Sudo User
+    sudo_users = {160149610,123456789}, -- Sudo User
     moderation = {data = 'data/moderation.json'}, -- Bot BackUp file
     about_text = [[iManager - Cli
 		
@@ -260,8 +260,8 @@ github.com/MobinDehghani/iManager
 
 Special thanks to :
 @Namusn - Parsaw
-@Sudo1 - Amir Hossein
-@inviter - Mobin
+@Sudo1 - Amir
+@inviter - Samin
 @Alirezamee - AliReza
 
 Bot Support :
