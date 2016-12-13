@@ -269,7 +269,13 @@ https://telegram.me/joinchat/CYuwakBXO9sosgQ_8xuYTw
 ]],
     help_text_realm = [[ ]],      -- Help Text (Relam)
     help_text = [[ ]],            -- Help Text (NormalGroup)
-	help_text_super =[[ ]],   -- Help Text (SuperGroup)
+	help_text_super =[[<b>iManager</b> Help Text :
+
+▫️For Members :
+telegram.me/PrivateTeam/65
+
+▫️For members :
+telegram.me/PrivateTeam/66]],   -- Help Text (SuperGroup)
   }
   serialize_to_file(config, './data/config.lua')
   print('Saved Config into ./data/config.lua')
