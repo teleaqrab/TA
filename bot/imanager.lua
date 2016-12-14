@@ -254,7 +254,7 @@ github.com/MobinDehghani/iManager
 		
 @MobinDev <i>[Developer]</i>
 @MrKrn <i>[Seller]</i>
-@AboutBots <i>[Channel]</i>
+@PrivateTeam <i>[Channel]</i>
 @leedBot <i>[API-Bot]</i>
 
 Special thanks to :
