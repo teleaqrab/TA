@@ -220,7 +220,6 @@ function create_config( )
     "Anti_Spam",
     "Owners",
     "Broadcast",
-    "Invite",
     "All",
     "Whitelist",
     "CleanDeleted",
