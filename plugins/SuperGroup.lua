@@ -2875,7 +2875,7 @@ end
 			data[tostring(msg.to.id)]['settings']['flood_msg_max'] = flood_max
 			save_data(_config.moderation.data, data)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] set flood to ["..matches[2].."]")
-			return 'Flood has been set to: '..matches[2]
+			return '<b>Flood</b> Has been set To : <code>'..matches[2]..'</code>'
 		end
 		if matches[1] == 'public'or matches[1] =='عمومی' and is_owner(msg) then
 			local target = msg.to.id
