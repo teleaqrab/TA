@@ -23,11 +23,6 @@ if is_chat_msg(msg) or is_super_group(msg) then
 	else
 		lock_fwd = 'yes'
 	end
-	if settings.lock_reply then
-		lock_reply = settings.lock_reply
-	else
-		lock_reply = 'yes'
-	end
     if settings.lock_tag then
 		lock_tag = settings.lock_tag
 	else
