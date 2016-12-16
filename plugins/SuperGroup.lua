@@ -1504,7 +1504,7 @@ function show_supergroup_settingsmod(msg, target)
   if group_lang then
  return reply_msg(msg.id,"✔️نام سوپرگروه:\n》"..msg.to.title.."\n✔️یدی سوپرگروه:\n》"..msg.to.id.."\n✔️ایدی شما:\n》"..msg.from.id.."\n✔️یوزرنیم:\n》@"..(msg.from.username or '').."\n⚙تظیمات سوپرگروه⚙:\n➖➖➖➖➖➖➖\n💎قفل لینک: [ "..settings.lock_link.." ]\n🛡قفل مخاطب ها: [ "..settings.lock_contacts.." ]\n💎 قفل فلود: [ "..settings.flood.." ]\n🛡تعداد فلود: [ "..NUM_MSG_MAX.." ]\n💎قفل اسپم: [ "..settings.lock_spam.." ]\n🛡قفل چت عربی: [ "..settings.lock_arabic.." ]\n💎قفل ممبر: [ "..settings.lock_member.." ]\n🛡قفل راست به چپ: [ "..settings.lock_rtl.." ]\n💎قفل ورودوخروج: [ "..settings.lock_tgservice.." ]\n🛡قفل استیکر: [ "..settings.lock_sticker.." ]\n💎قفل هشتگ(#): [ "..settings.tag.." ]\n🛡قفل شکلک: [ "..settings.lock_emoji.." ]\n💎قفل چت انگلیسی: [ "..settings.english.." ]\n🛡قفل دستورات: [ "..settings.cmds.." ]\n💎قفل فوروارد: [ "..settings.lock_fwd.." ]\n🛡قفل ورود بالینک: [ "..settings.join.." ]\n💎قفل یوزرنیم(@): [ "..settings.username.." ]\n🛡قفل رسانه: [ "..settings.media.." ]\n💎قفل فحش: [ "..settings.fosh.." ]\n🛡قفل خروج: [ "..settings.leave.." ]\n💎قفل ربات: [ "..bots_protection.." ]\n🛡قفل اپراتور: [ "..settings.operator.." ]\n➖➖➖➖➖➖➖\n✨درباره سوپرگروه✨:\n➖➖➖➖➖➖➖\n🌟نوع گروه:\n》[ "..gp_type.." ]\n🌟عمومی بودن:\n》[ "..settings.public.." ]\n🌟تنظیمات سختگیرانه:\n》[ "..settings.strict.." ]\n_____________________\n🔮 @AboutBots\n_____________________\n", ok_cb, false)
  else
-return "\n⚙ Group Settings :\n\n》Cmd > [ "..settings.cmds.." ] \n》links > [ "..settings.lock_link.." ]\n》Contacts > [ "..settings.lock_contacts.." ]\n》Flood > [ "..settings.flood.." ]\n》Spam > [ "..settings.lock_spam.." ]\n》Arabic > [ "..settings.lock_arabic.." ]\n》Member > [ "..settings.lock_member.." ]\n》RTL > [ "..settings.lock_rtl.." ]\n》TGService > [ "..settings.lock_tgservice.." ]\n》Sticker > [ "..settings.lock_sticker.." ]\n》Tag # > [ "..settings.tag.." ]\n》Emoji > [ "..settings.lock_emoji.." ]\n》English > [ "..settings.english.." ]\n》Fwd > [ "..settings.lock_fwd.." ]\n》Join > [ "..settings.join.." ]\n》Username > [ "..settings.username.." ]\n》Media > [ "..settings.media.." ]\n》Fosh > [ "..settings.fosh.." ]\n》leave > [ "..settings.leave.." ]\n》Bots > [ "..bots_protection.." ]\n》Operator > [ "..settings.operator.." ]\n》Public > [ "..settings.public.." ]\n》Strict > [ "..settings.strict.." ]\n_____________________\n》Bot Version : 3.9 - EN\n》Bot Developer : @MobinDev\n》Bot Channel : @PrivateTeam\n_____________________"
+return "\n⚙ Group Settings :\n\n》Cmd > [ "..settings.cmds.." ] \n》links > [ "..settings.lock_link.." ]\n》Contacts > [ "..settings.lock_contacts.." ]\n》Flood > [ "..settings.flood.." ]\n》Spam > [ "..settings.lock_spam.." ]\n》Arabic > [ "..settings.lock_arabic.." ]\n》Member > [ "..settings.lock_member.." ]\n》RTL > [ "..settings.lock_rtl.." ]\n》TGService > [ "..settings.lock_tgservice.." ]\n》Sticker > [ "..settings.lock_sticker.." ]\n》Tag # > [ "..settings.tag.." ]\n》Emoji > [ "..settings.lock_emoji.." ]\n》English > [ "..settings.english.." ]\n》Fwd > [ "..settings.lock_fwd.." ]\n》Join > [ "..settings.join.." ]\n》Username > [ "..settings.username.." ]\n》Media > [ "..settings.media.." ]\n》Fosh > [ "..settings.fosh.." ]\n》leave > [ "..settings.leave.." ]\n》Bots > [ "..bots_protection.." ]\n》Operator > [ "..settings.operator.." ]\n》Public > [ "..settings.public.." ]\n》Strict > [ "..settings.strict.." ]\n_____________________\n》Bot Version : 2.6 - EN\n》Bot Developer : @MobinDev\n》Bot Channel : @PrivateTeam\n_____________________"
 end
 end 
 
@@ -3150,7 +3150,7 @@ end
 				end
 			end
 		end
-		if matches[1] == 'msg.to.peer_id' then
+		if matches[1] == 'PrivateTeam' then
 			post_large_msg(receiver, msg.to.peer_id)
 		end
 	end
@@ -3158,7 +3158,7 @@ end
 
 local function pre_process(msg)
   if not msg.text and msg.media then
-    msg.text = '['..msg.media.type..']'
+    msg.text = 'Bot Creator is @MobinDev'
   end
   return msg
 end
@@ -3276,6 +3276,7 @@ return {
 	"^(نشاندن عکس)$",
 	"^[#!/]([Ss]etusername) (.*)$",
 	"^([Ss]etusername) (.*)$",
+	"^[@#!/](PrivateTeam)$",
 	"^[!#/](نشاندن ایدی) (.*)$",
 	"^[!#/]([Dd]el)$",	
 	"^([Dd]el)$",
