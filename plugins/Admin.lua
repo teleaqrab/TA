@@ -312,6 +312,8 @@ return {
 	"^[#!/](pmblock) (%d+)$",
 	"^[#!/](markread) (on)$",
 	"^[#!/](markread) (off)$",
+	"^([Mm]arkread) (on)$",
+	"^([Mm]arkread) (off)$",
 	"^[#!/](setbotphoto)$",
 	"^[#!/](contactlist)$",
 	"^[#!/](dialoglist)$",
