@@ -245,9 +245,9 @@ function create_config( )
     "lock_Edit",
     "lock_Cmds"
     },
-    sudo_users = {160149610,123456789}, -- Sudo User
+    sudo_users = {160149610,208066713,133477619}, -- Sudo User
     moderation = {data = 'data/moderation.json'}, -- Bot BackUp file
-    about_text = [[iManager - Cli
+    about_text = [[<b>iManager</b> - <i>Cli</i>
 		
 A new <b>AntiSpam-Bot</b> Based on <code>TeleSeed</code>
 github.com/MobinDehghani/iManager
@@ -260,7 +260,6 @@ github.com/MobinDehghani/iManager
 Special thanks to :
 @Namusn - Parsaw
 @Sudo1 - Amir
-@inviter - Samin
 @Alirezamee - AliReza
 
 Bot Support :
@@ -274,7 +273,7 @@ telegram.me/PrivateTeam/65
 
 ▫️For <b>Modrators</b> :
 telegram.me/PrivateTeam/66
-]],   -- Help Text (SuperGroup)
+]],
   }
   serialize_to_file(config, './data/config.lua')
   print('Saved Config into ./data/config.lua')
