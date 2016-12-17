@@ -3,6 +3,9 @@
 while [  $COUNTER -lt 5 ]; do
 kill $(pgrep telegram-cli)
 ./launch.sh
-sleep 2 #Relaunch Time
-#let COUNTER=COUNTER+1 
+sleep 2 # Relaunch Time
 done
+
+# Creator : @MobinDev
+# Channel : @PrivateTeam
+
