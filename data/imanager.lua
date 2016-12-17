@@ -245,7 +245,7 @@ function create_config( )
     "lock_Edit",
     "lock_Cmds"
     },
-    sudo_users = {160149610,208066713,133477619}, -- Sudo User
+    sudo_users = {295723143,174410791,288207930}, -- Sudo User
     moderation = {data = 'data/moderation.json'}, -- Bot BackUp file
     about_text = [[<b>iManager</b> - <i>Cli</i>
 		
